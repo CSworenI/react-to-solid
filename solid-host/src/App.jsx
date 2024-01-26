@@ -3,6 +3,9 @@ import { render } from "solid-js/web";
 import "./index.scss";
 
 import Counter from "react_remote/Counter";
+import Solidify from './react-solid';
+
+const CounterR = Solidify(Counter);
 
 const App = () => (
   <div class="mt-10 text-3xl mx-auto max-w-6xl">
@@ -10,7 +13,7 @@ const App = () => (
     <div>Framework: solid-js</div>
     <div>Language: JavaScript</div>
     <div>CSS: Tailwind</div>
-    <Counter countStart={50}/>
+    <CounterR counter={50}/>
   </div>
 );
 
